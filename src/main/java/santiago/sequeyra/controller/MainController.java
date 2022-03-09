@@ -73,14 +73,13 @@ public class MainController {
     @GetMapping("/enviarinvitaciones")
     public String enviarInvitaciones() {
         List<Persona> todasPersonas=personaService.listarPersonas(); 
-        System.out.println(todasPersonas); //hasta aca todo bien, recupera la lista de personas
+        System.out.println(todasPersonas); 
         List<Persona> personas = new ArrayList();
         for(Persona p:todasPersonas){
             if(p.getInvitado()==1){
                 personas.add(p);
             }
         }
-        System.out.println("AAAAAAAAAAAAA:"+personas);
         personaService.borrarInvitados(personas);
                 
         return "redirect:/";
