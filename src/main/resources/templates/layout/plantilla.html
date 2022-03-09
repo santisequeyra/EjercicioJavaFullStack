@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+    <head th:fragment="head">
+
+        <meta charset="UTF-8"/> <meta name="viewport"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"/></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"/></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"/></script>
+
+
+</head>
+
+
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bars"></i> Control Invitaciones
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item"th:href="@{/}">Inicio</a>
+                    <a class="dropdown-item" href="mailto:santisequeyra@hotmail.com">Contáctame</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<footer th:fragment="footer" class="bg-secondary text-white mt-2 p-3">
+    <div class="container">
+        <div class="col">
+            <p class="lead text-center "> &copy;2022 Hecho por <a class="text-white text-decoration-underline" href="https://www.linkedin.com/in/santiago-sequeyra/" target="_blank"> Santiago Sequeyra</a> </p>
+            <p class="lead text-center ">
+                <a class="text-white text-center" href="mailto:santisequeyra@hotmail.com">Correo <i class="text-white fa fa-at"></i></a>
+                <a class="text-white text-center" href="https://www.linkedin.com/in/santiago-sequeyra/"> | LinkedIn <i class="text-white fab fa-linkedin"></i></a>
+                <a class="text-white text-center" href="https://github.com/santisequeyra/"> | GitHub <i class="text-white fab fa-github"></i></a>
+                <a class="text-white text-center" href="https://api.whatsapp.com/send?phone=542215362423/"> | WhatsApp <i class="text-white fab fa-whatsapp"></i></a>
+
+            </p>
+        </div>
+    </div>
+</footer>    
+
+</body>
+</html>

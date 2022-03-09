@@ -1,0 +1,62 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+    <head th:replace="layout/plantilla :: head"/>
+    <title>Modificar persona - Ejercicio Eldar Santiago Sequeyra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+</head>
+<script>
+    
+    function index(){
+        window.location.href="http://localhost:8080/"
+    }
+</script>
+<body>
+    <header th:replace="layout/plantilla :: header"/>
+
+    <div class="container">
+        <h3>Datos de la persona</h3>
+
+
+        
+        <br/>
+
+        <form th:action="@{/guardar}" method="post" th:object="${persona}">
+
+            <input type="hidden" name="idpersonas" th:field="*{idpersonas}"></input>
+
+            <div class="form-group ">
+                <label for="nombre"><span class="text-danger">*</span>Nombre: </label>
+                <input  class="form-control"  type="text" name="nombre" th:field="*{nombre}"></input>
+                <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Error nombre</span>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido"><span class="text-danger">*</span>Apellido: </label>
+                <input class="form-control"  type="text" name="apellido" th:field="*{apellido}"></input>
+                <span th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}">Error apellido</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><span class="text-danger">*</span>Email: </label>
+                <input class="form-control"  type="text" name="email" th:field="*{email}"></input>
+                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error email</span>
+                <small id="emailHelp" class="form-text text-muted">xxx@xxx.com.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono"><span class="text-danger">*</span>Teléfono: </label>
+                <input class="form-control"  type="text" name="telefono" th:field="*{telefono}"></input>
+                <span th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}">Error telefono</span>
+                <small id="telefonoHelp" class="form-text text-muted">Sólo números y guiones.</small>
+            </div>
+
+            <br/>
+            <input class="btn btn-primary" type="submit" name="guardar" value="Guardar"/>
+             <a href="/" class="btn btn-success">&nbsp;Volver al inicio</a>
+        </form>
+    </div>
+</body>
+
+<footer th:replace="layout/plantilla :: footer"/>
+</html>
