@@ -73,7 +73,7 @@ public class MainController {
     @GetMapping("/enviarinvitaciones")
     public String enviarInvitaciones() {
         List<Persona> todasPersonas=personaService.listarPersonas(); 
-        System.out.println(todasPersonas); 
+        
         List<Persona> personas = new ArrayList();
         for(Persona p:todasPersonas){
             if(p.getInvitado()==1){
