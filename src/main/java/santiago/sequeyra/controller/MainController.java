@@ -1,7 +1,6 @@
 package santiago.sequeyra.controller;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
