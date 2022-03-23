@@ -1,2 +1,2 @@
-"Ejercicio Java FullStack - Santiago Sequeyra" 
+"Repositorio ejercicio Java FullStack - Santiago Sequeyra" 
 https://www.linkedin.com/in/santiago-sequeyra/
